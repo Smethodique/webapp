@@ -1,12 +1,13 @@
 # ---------- build stage ----------
 FROM node:22-alpine AS build
+RUN (corepack enable && corepack prepare pnpm@10.24.0 --activate) \
+    || npm install -g pnpm@10.24.0 --no-audit --no-fund
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci --no-audit --no-fund --no-progress \
-    || npm install --no-audit --no-fund --no-progress \
-    || (sleep 5 && npm ci --no-audit --no-fund --no-progress)
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile \
+    || (sleep 5 && pnpm install --frozen-lockfile)
 COPY . .
-RUN npm run build
+RUN pnpm build
 
 # ---------- runtime stage ----------
 FROM node:22-alpine
