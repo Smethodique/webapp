@@ -1,0 +1,11 @@
+export { default as StoreHeader } from './StoreHeader';
+export { default as StoreHero } from './StoreHero';
+export { default as StoreMarquee } from './StoreMarquee';
+export { default as StoreStory } from './StoreStory';
+export { default as StoreMenu } from './StoreMenu';
+export { default as StoreGallery } from './StoreGallery';
+export { default as StoreReviews } from './StoreReviews';
+export { default as StoreBooking } from './StoreBooking';
+export { default as StoreMapHours } from './StoreMapHours';
+export { default as StoreFooter } from './StoreFooter';
+export { default as StoreSectionHead } from './StoreSectionHead';

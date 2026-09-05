@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1">
+  <!-- Moroccan 8-point zellige star, thin line motif -->
+  <g>
+    <rect x="30" y="30" width="60" height="60" />
+    <rect x="30" y="30" width="60" height="60" transform="rotate(45 60 60)" />
+    <circle cx="60" cy="60" r="14" />
+    <circle cx="60" cy="60" r="6" />
+    <path d="M60 2v20M60 98v20M2 60h20M98 60h20" />
+    <path d="M20 20l12 12M100 20L88 32M20 100l12-12M100 100L88 88" />
+    <circle cx="60" cy="60" r="52" opacity="0.5" />
+  </g>
+</svg>
